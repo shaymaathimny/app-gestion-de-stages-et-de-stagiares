@@ -1,0 +1,61 @@
+<div class="container" id="main-container" style="background-image: url('../assets/img/AdobeStock_4.jpeg');">
+  <a class="btn btn-app bg-info" (click)="ajoutstage()">
+    
+    <i class="fas fa-plus"></i> Ajouter
+  </a>
+<h1 class="text-center"> Liste des Stages</h1>
+
+         <table class="table table-bordered table-striped">
+            <thead>
+    <br> <br>
+              <tr class="text-center" style="background-color:rgb(239, 250, 255)">
+                <th scope="col">Titre</th>
+                <th scope="col">Type</th>
+                <th scope="col">Date_Début</th>
+                <th scope="col">Date_Fin</th>
+                <th scope="col">Description</th>
+                <th scope="col">Attestation</th>
+                <th scope="col">Lettre_Affectation</th>
+                <th scope="col">nom_Service</th>
+                <th scope="col">Encadrant</th>
+                <th scope="col">Stagiaires</th>
+                <th> Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let stages of stageList " class="col-md-6 col-xl-5 text-center">
+                <td>{{stages.titreStage}}</td>
+                <td>{{stages.typeStage}}</td>
+                <td>{{stages.dateDebutStage}}</td>
+                <td>{{stages.dateFinStage}}</td>
+                <td>{{stages.description}}</td>
+                <td>{{stages.attestation ? "oui":"non"}}</td>
+                <td>{{stages.pdf ? "oui":"non"}}</td>
+                <td>{{stages.nomService}}</td>
+                <td>
+                  <ul class="list-inline">
+                      <li class="list-inline-item">
+                         <img class="table-avatar" src="{{pathiconEnc}}"> &nbsp; {{stages.encadreurfullname}}
+                      </li>
+
+                  </ul>
+              </td>
+                <td class ="text-center">
+                  <div  *ngFor="let name of stages.stagiairefullnames ">
+                    
+                    <img class="table-avatar" src="{{pathiconStgr}}"> &nbsp; 
+                    <p>{{name}}</p>
+                  </div>
+              </td>
+              <td style="background-color:beige"> 
+                <div class="btn-group btn-group-sm">
+                  <a (click)="stageDetails(stages.id)" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                  <a (click)="Modifstage(stages.id)" class="btn btn-warning"><i style="color:white" class="fas fa-pencil-square-o"></i></a>
+                  <a (click)="StageDelete(stages.id)" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </div></td>
+            
+              </tr></tbody></table></div>
+      
+    
+  
+  

@@ -1,0 +1,46 @@
+<div class="container" id="main-container">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">fullname</label>
+        <input
+         
+          class="form-control"
+          id="fullname"
+          required
+          [(ngModel)]="recru.fullname"
+          name="fullname"
+          type="string"
+        />
+
+      </div>
+      <div class="form-group">
+        <label for="telephone">telephone</label>
+        <input
+          class="form-control"
+          id="telephone"
+          required
+          [(ngModel)]="recru.telephone"
+          name="telephone"
+          type="number"
+        />
+      </div>
+      <div class="form-group">
+          <label for="email">email</label>
+          <input
+            class="form-control"
+            id="email"
+            required
+            [(ngModel)]="recru.email"
+            name="string"
+            type="email"
+          />
+        </div>
+    
+      
+      <button (click)="ajoutrecruteur()" class="btn btn-success">Submit</button>
+    </div>
+  
+  </div>
+</div>
+

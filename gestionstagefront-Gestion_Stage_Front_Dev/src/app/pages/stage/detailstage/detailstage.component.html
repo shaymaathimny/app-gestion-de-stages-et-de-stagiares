@@ -1,0 +1,45 @@
+<h2>Stage détails</h2> 
+
+<hr/>
+<div class="container" id="main-container">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-8">
+    <div class="card border-primary mb-3" style="max-width: 100%;">
+<div *ngIf="currentStage">
+  <div>
+    <label><b>titre de stage : </b></label> {{currentStage.titreStage}}
+  </div>
+  <div>
+    <label><b>type de stage: </b></label> {{currentStage.typeStage}}
+  </div>
+  <div>
+    <label><b>Date début du stage: </b></label> {{currentStage.dateDebutStage| date:"yyyy/MM/dd"}}
+  </div>
+  <div>
+    <div>
+ <label><b>Date fin du stage: </b></label> {{currentStage.dateFinStage| date:"yyyy/MM/dd"}}
+      </div> 
+    <label><b>description: </b></label> {{currentStage.description}}
+  </div>  
+  <div>
+    <label><b> attestation : </b></label> {{currentStage.attestation ? "oui":"non"}}
+  </div> 
+  <div>
+    <label><b>pdf : </b></label> {{currentStage.pdf ? "oui":"non"}}
+  </div>
+  <div>
+    <label><b>nom de service : </b></label> {{currentStage.nomService}}
+  </div>
+  <div>
+    <label><b>encadrant: </b></label> {{currentStage.encadreurfullname}}
+  </div>
+  <div>
+    <label><b>stagiaires : </b></label> {{currentStage.stagiairefullnames}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-dark">Retour </button><br>
+</div>

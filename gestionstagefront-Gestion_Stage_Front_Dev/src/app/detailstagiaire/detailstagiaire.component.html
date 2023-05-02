@@ -1,0 +1,37 @@
+<h2> <b>Stagiaire détails</b></h2> 
+
+<hr/>
+<div class="container" id="main-container">
+  
+  <div class="col-md-10">
+    <div class="card border-succcess mb-5" style="max-width: 100%;">
+<div *ngIf="currentStagiaire">
+  <div>
+    <label><b>Nom et Prénom : </b></label> {{currentStagiaire.fullname}}
+  </div>
+  <div>
+    <label><b>Téléphone: </b></label> {{currentStagiaire.telephone}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{currentStagiaire.email}}
+  </div>
+  <div>
+    <div>
+ <label><b>Date de naissance: </b></label> {{currentStagiaire.datenaissance| date:"yyyy/MM/dd"}}
+      </div> 
+      <div>
+    <label><b>Adresse: </b></label> {{currentStagiaire.adresse}}
+  </div>  
+  <div>
+    <label><b>nom d'université: </b></label> {{currentStagiaire.nomUniv}}
+  </div>  
+  <div>
+    <label><b>numéro du carte cin: </b></label> {{currentStagiaire.numCIN}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-success">Retour</button><br>
+</div>
+

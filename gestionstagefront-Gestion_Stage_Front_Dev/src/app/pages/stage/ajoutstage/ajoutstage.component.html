@@ -1,0 +1,156 @@
+<h1 class="form-title text-center">Ajouter Stage</h1>
+<div class="row">
+   
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    
+    
+    
+        <div class="card border-info mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../assets/img/stage4.jpg" height="100%" width="100%">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Titre de stage</label>
+          <input
+           
+            class="form-control"
+            id="titreStage"
+            required
+            [(ngModel)]="stage.titreStage"
+            name="titreStage"
+            type="string"
+          />
+  
+        </div>
+        <div class="form-group">
+          <label for="typeStage">Type de stage</label>
+          <input
+            class="form-control"
+            id="typeStage"
+            required
+            [(ngModel)]="stage.typeStage"
+            name="typeStage"
+            type="string"
+          />
+        </div>
+        <div class="form-group">
+            <label for="dateDebutStage">Date Début de stage</label>
+            <input
+              class="form-control"
+              id="dateDebutStage"
+              required
+              [(ngModel)]="stage.dateDebutStage"
+              name="dateDebutStage"
+              type="date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="dateFinStage">Date Fin de stage</label>
+            <input
+              class="form-control"
+              id="dateFinStage"
+              required
+              [(ngModel)]="stage.dateFinStage"
+              name="dateFinStage"
+              type="date"
+            />
+          </div>
+  
+          <div class="form-group">
+            <label for="attestation">Attestation</label>
+            <input
+              
+              id="attestation"
+              required
+              [(ngModel)]="stage.attestation"
+              name="attestation"
+              type="checkbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="pdf">Lettre d'affectation</label>
+            <input
+              
+              id="pdf"
+              required
+              [(ngModel)]="stage.pdf"
+              name="pdf"
+              type="checkbox"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nomService">Nom Service</label>
+            <input
+              class="form-control"
+              id="nomService"
+              required
+              [(ngModel)]="stage.nomService"
+              name="nomService"
+              type="string"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input
+              class="form-control"
+              id="description"
+              required
+              [(ngModel)]="stage.description"
+              name="description"
+              type="string"
+            />
+          </div>
+      
+          <div class="form-group">
+            <label for="encadreur">Encadrant</label>
+            <select type="text" [(ngModel)]="stage.encadreur.id" class="form-control" id="encadreur" >
+              <option value=-1 disabled checked>selectionner</option>
+              <option *ngFor="let encadr of encadreure" [value]="encadr.id">{{encadr.fullname}}</option>
+            </select>
+         
+            <div class="form-group">
+              <label for="stagiaire">stagiaires</label>
+             
+              <p-multiSelect [options]="labelValu" [(ngModel)]="stage.stagiaireIds" defaultLabel="stagiaires"></p-multiSelect>
+        
+            </div>
+          </div>
+        
+
+        <button (click)="ajoutstage()" class="btn btn-warning">Ajouter</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Stage a eté ajouter avec succée!</h4>
+        <button class="btn btn-success" (click)="navigate()">Ajouter</button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="col-md-2">
+</div>
+</div>
+  
+  

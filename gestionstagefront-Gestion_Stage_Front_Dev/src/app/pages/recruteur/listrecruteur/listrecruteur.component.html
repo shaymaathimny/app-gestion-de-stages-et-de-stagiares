@@ -1,0 +1,30 @@
+<div class="container" id="main-container">
+  <button (click)="ajoutrecruteur()" class="btn btn-info" style="margin-left: 10px">ajouter</button>
+       <table class="table table-striped">
+          <thead>
+  
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">fullname</th>
+              <th scope="col">telephone</th>
+              <th scope="col">email</th>
+              <th scope="col">datenaissance </th>
+              <th scope="col">adresse</th>
+              <th> action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let recru of recruteurs " class="col-md-6 col-xl-5">
+              <td>{{recru.id}}</td>
+              <td>{{recru.fullname}}</td>
+              <td>{{recru.telephone}}</td>
+              <td>{{recru.email}}</td>
+              <td>{{recru.datenaissance }}</td>
+              <td>{{recru.adresse}}</td>
+              <td>{{recru.nomUniv}}</td>
+              <td>{{recru.numCIN}}</td>
+             
+            </tr></tbody></table></div>
+    
+  
+

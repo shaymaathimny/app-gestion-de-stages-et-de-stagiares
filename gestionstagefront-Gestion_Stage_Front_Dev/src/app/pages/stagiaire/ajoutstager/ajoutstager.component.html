@@ -1,0 +1,114 @@
+<h1 class="form-title text-center">Ajouter Stagiaire</h1>
+<div class="row">
+   
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    
+      <br>
+      <br>
+    
+        <div class="card border-info mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{path}}" height="100%" width="100%">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                    <div class="submit-form">
+                        <div *ngIf="!submitted">
+                            <div class="row">
+                            <div class="form-group col-md-6">
+                              <label for="title">Nom et Prénom</label>
+                              <input
+                              type="text"
+                              class="form-control"
+                              id="fullname"
+                              required
+                              [(ngModel)]=" stager.fullname"
+                              name="fullname"
+                              />
+                    
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="telephone">Télephone</label>
+                              <input
+                              class="form-control"
+                              id="telephone"
+                              required
+                              [(ngModel)]=" stager.telephone"
+                              name="telephone"
+                              type="string"
+                              />
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="email">Email</label>
+                                <input
+                                  class="form-control"
+                                  id="email"
+                                  required
+                                  [(ngModel)]=" stager.email"
+                                  name="email"
+                                />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Date de naissance </label>
+                                  <input
+                                    class="form-control"
+                                    id="datenaissance"
+                                    required
+                                    [(ngModel)]=" stager.datenaissance"
+                                    name="datenaissance"
+                                    type="date"
+                                  />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="adresse">Adresse</label>
+                                  <input
+                                    class="form-control"
+                                    id="adresse"
+                                    required
+                                    [(ngModel)]=" stager.adresse"
+                                    name="adresse"
+                                    type="text"
+                                  />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="fonctionEncad">Université</label>
+                                  <input
+                                  class="form-control"
+                                  id="nomUniv"
+                                  required
+                                  [(ngModel)]=" stager.nomUniv"
+                                  name="nomUniv"
+                                  type="text"
+                                />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="fonctionEncad">CIN</label>
+                                  <input
+                                    class="form-control"
+                                    id="numCIN"
+                                    required
+                                    [(ngModel)]=" stager.numCIN"
+                                    name="numCIN"
+                                    type="text"
+                                  />
+                            </div>
+                            
+                            
+                        </div>
+                        <button (click)="ajoutstagiaire()" class="btn btn-success">Ajouter</button>
+                        </div>
+
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+    <div class="col-md-2">
+    </div>
+    </div>

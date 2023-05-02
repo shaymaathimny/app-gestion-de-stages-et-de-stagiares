@@ -1,0 +1,109 @@
+<h1 class="form-title text-center"> <b>Mettre a jour un Stagiaire</b></h1>
+<div class="row">
+  <br>
+  <br>
+
+<div class="container" id="main-container">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">Nom et Prénom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullname"
+            required
+            [(ngModel)]="stagiaire.fullname"
+            name="fullname"
+          />
+
+        </div>
+        <div class="form-group">
+          <label for="telephone">Téléphone</label>
+          <input
+            class="form-control"
+            id="telephone"
+            required
+            [(ngModel)]="stagiaire.telephone"
+            name="telephone"
+            type="string"
+          />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              class="form-control"
+              id="email"
+              required
+              [(ngModel)]="stagiaire.email"
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Date de naissance </label>
+            <input
+              class="form-control"
+              id="datenaissance"
+              required
+              [ngModel]="stagiaire.datenaissance| date:'yyyy-MM-dd'" 
+              (ngModelChange)="stagiaire.datenaissance=$event"
+              name="datenaissance"
+              type="date"
+              
+            />
+          </div>
+          <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input
+              class="form-control"
+              id="adresse"
+              required
+              [(ngModel)]="stagiaire.adresse"
+              name="adresse"
+        type="text"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nomUniv">Nom d'université</label>
+            <input
+              class="form-control"
+              id="nomUniv"
+              required
+              [(ngModel)]="stagiaire.nomUniv"
+              name="nomUniv"
+        type="text"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nomUniv">Numéro de carte CIN</label>
+            <input
+              class="form-control"
+              id="numCIN"
+              required
+              [(ngModel)]="stagiaire.numCIN"
+              name="numCIN"
+        type="text"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nomUniv">Nom d'université</label>
+            <input
+              class="form-control"
+              id="nomUniv"
+              required
+              [(ngModel)]="stagiaire.nomUniv"
+              name="nomUniv"
+        type="text"
+            />
+          </div>
+        
+        <button (click)=" Modifstagiaire()" class="btn btn-success">Modifier</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Stagiaire a eté mofifier avec succées!</h4>
+        <button class="btn btn-success" (click)="navigate()">Ajouter</button>
+    </div>
+    </div>
+  </div>
+
+

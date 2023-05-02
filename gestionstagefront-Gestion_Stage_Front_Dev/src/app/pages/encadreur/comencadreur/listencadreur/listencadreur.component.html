@@ -1,0 +1,33 @@
+<div class="container" id="main-container">
+  <button (click)="ajoutencadreur()" class="btn btn-info" style="margin-left: 10px">ajouter</button>
+     <table class="table table-striped">
+        <thead>
+
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">fullname</th>
+            <th scope="col">telephone</th>
+            <th scope="col">email</th>
+            <th scope="col">datenaissance </th>
+            <th scope="col">adresse</th>
+            <th scope="col">fonctionEncad</th>
+            <th> action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let encad of encadreure " class="col-md-6 col-xl-5">
+            <td>{{encad.id}}</td>
+            <td>{{encad.fullname}}</td>
+            <td>{{encad.telephone}}</td>
+            <td>{{encad.email}}</td>
+            <td>{{encad.datenaissance | date:"yyyy/MM/dd"}}</td>
+            <td>{{encad.adresse}}</td>
+            <td>{{encad.fonctionEncad}}</td>
+            <td> 
+              <a type="button" class="btn btn-sm btn-danger"   (click)="EncadDelete(encad.id)"> supprimer</a>&nbsp;
+              <a type="button" class="btn btn-sm btn-warning"  (click)="Modifencadreur(encad.id)" >Modifier</a>
+              <button (click)="encadreurDetails(encad.id)" class="btn btn-info" style="margin-left: 10px">Detail</button>
+            </td>
+
+          </tr></tbody></table></div>
+  

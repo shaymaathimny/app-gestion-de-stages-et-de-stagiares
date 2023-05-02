@@ -1,0 +1,117 @@
+<h1 class="form-title text-center">Ajouter Encadrant</h1>
+<div class="row">
+   
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+    
+    
+    <br>
+    <br>
+        <div class="card border-info mb-3" style="max-width: 100%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../assets/img/enaca.png" height="100%" width="100%">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                    <div class="submit-form">
+                        <div *ngIf="!submitted">
+                            <div class="row">
+                            <div class="form-group col-md-6">
+                            <label for="title">Nom et prénom</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="fullname"
+                                required
+                                [(ngModel)]="encadreur.fullname"
+                                name="fullname"
+                            />
+                    
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="telephone">Téléphone</label>
+                            <input
+                                class="form-control"
+                                id="telephone"
+                                required
+                                [(ngModel)]="encadreur.telephone"
+                                name="telephone"
+                                type="string"
+                            />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input
+                                class="form-control"
+                                id="email"
+                                required
+                                [(ngModel)]="encadreur.email"
+                                name="email"
+                                />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Date de naissance </label>
+                                <input
+                                class="form-control"
+                                id="datenaissance"
+                                required
+                                [(ngModel)]="encadreur.datenaissance"
+                                name="datenaissance"
+                                type="date"
+                                />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="adresse">Adresse</label>
+                                <input
+                                class="form-control"
+                                id="adresse"
+                                required
+                                [(ngModel)]="encadreur.adresse"
+                                name="adresse"
+                            type="text"
+                                />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="fonctionEncad">Fonction</label>
+                                <input
+                                class="form-control"
+                                id="fonctionEncad"
+                                required
+                                [(ngModel)]="encadreur.fonctionEncad"
+                                name="fonctionEncad"
+                            type="text"
+                                />
+                            </div>
+                            
+                            
+                        </div>
+                        <button (click)="ajoutencadreur()" class="btn btn-info">Ajouter</button>
+                        </div>
+                        <div *ngIf="submitted">
+                            <h4>Encadreur was submitted successfully!</h4>
+                            <button class="btn btn-success" (click)="navigate()">Add</button>
+                        </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+    
+        
+        
+        
+        
+        
+    
+    </div>
+    <div class="col-md-2">
+    </div>
+    </div>
